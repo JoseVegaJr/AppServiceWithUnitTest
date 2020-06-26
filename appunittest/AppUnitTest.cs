@@ -20,6 +20,7 @@ namespace appunittest
 
         }
 
+        [TestMethod]
         public void Return_A_FalseCondition_Pass()
         {
              //Assign
@@ -31,6 +32,19 @@ namespace appunittest
 
             //Assert
             Assert.AreNotEqual(result, y);
+
+        }
+
+        [TestMethod]
+        public void Instance_A_Return_Object()
+        {
+             //Assign
+            object o = new object(); 
+            
+            //Arrange
+            object result = o; 
+            //Assert
+            Assert.IsInstanceOfType(result, typeof(object) );
 
         }
     }
